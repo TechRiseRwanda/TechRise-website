@@ -1,0 +1,123 @@
+.about-section {
+    padding: 50px 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Images Section */
+  .image-section {
+    position: relative;
+    order: -1; /* Ensures the image section is always on the left */
+  }
+  
+  .image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image1 {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .image2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  
+  /* Text Section */
+  .text-section {
+    text-align: left;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00296b;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .details-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr; /* Stack sections vertically */
+    }
+  
+    .image2 {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: scale(1);
+      margin-top: 20px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .details-button {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,272 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .testimonial-section {
+    padding: 30px 15px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+  }
+  
+  .mycontainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden; /* Ensures no content spills out horizontally */
+  }
+  
+  /* Content Flexbox Layout */
+  .testimonial-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  /* Left Section */
+  .left-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%; /* Ensures it does not grow beyond screen width */
+  }
+  
+  .badge {
+    font-size: 1rem;
+    color: #000000;
+    background: none;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .left-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .left-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .btn-read-more {
+    background-color: #4e54c8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-read-more:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Right Section */
+  .right-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%; /* Prevents exceeding screen width */
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    max-width: 100%; /* Ensures it fits within its parent container */
+    box-sizing: border-box;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .testimonial-text i {
+    color: #4e54c8;
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+  
+  .client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .client-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .client-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .client-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+  }
+  
+  .arrow {
+    background: #fff;
+    border: 1px solid #4e54c8;
+    color: #4e54c8;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .arrow:hover {
+    background: #4e54c8;
+    color: #fff;
+  }
+  
+  /* Dots */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background: #4e54c8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-content {
+      flex-direction: column;
+      align-items: center; /* Align content in the center for smaller screens */
+    }
+  
+    .left-section {
+      text-align: center;
+    }
+  
+    .left-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .left-section p {
+      font-size: 0.9rem;
+    }
+  
+    .btn-read-more {
+      margin: 0 auto;
+    }
+  
+    .right-section {
+      width: 100%;
+    }
+  
+    .testimonial-card {
+      padding: 15px;
+    }
+  
+    .testimonial-text {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  
+    .controls {
+      position: static;
+      margin-top: 10px;
+    }
+  
+    .arrow {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+    }
+  
+    .dots {
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-section {
+      padding: 20px;
+    }
+  
+    .left-section h2 {
+      font-size: 1.2rem;
+    }
+  
+    .testimonial-text {
+      font-size: 0.8rem;
+    }
+  
+    .client-info h4 {
+      font-size: 0.9rem;
+    }
+  
+    .client-info p {
+      font-size: 0.7rem;
+    }
+  
+    .arrow {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .dot {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  

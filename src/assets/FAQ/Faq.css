@@ -1,0 +1,108 @@
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem 1rem; /* Decreased padding */
+    text-align: center;
+    margin: 100px 0 100px 0;
+  }
+  
+  .faqcontainer {
+    max-width: 1000px; /* Reduced width for smaller containers */
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .subtitle {
+    color: #4e54c8;
+    font-weight: 600; /* Lighter weight for subtitle */
+    text-transform: uppercase;
+  }
+  
+  .title {
+    font-size: 1.75rem; /* Reduced title font size */
+    font-weight: normal; /* Reduced title font weight */
+    margin: 0.5rem 0 1.5rem; /* Adjusted margin */
+    color: #000;
+  }
+  
+  /* FAQ Grid Layout */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted grid min-width */
+    gap: 1rem; /* Reduced gap between items */
+    align-items: start;
+  }
+  
+  /* FAQ Item */
+  .faq-item {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem; /* Reduced font size */
+  }
+  
+  .faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem; /* Reduced padding */
+    font-weight: 500; /* Decreased font weight */
+    color: #1f2937;
+    font-size: 0.95rem; /* Reduced font size */
+  }
+  
+  .faq-icon {
+    font-size: 1.25rem; /* Reduced icon size */
+    color: #4e54c8;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    padding: 0.8rem 1rem; /* Reduced padding */
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-size: 0.85rem; /* Reduced font size */
+    border-top: 1px solid #e5e7eb;
+    display: block;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .title {
+      font-size: 1.4rem; /* Adjusted title size */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .faq-question {
+      font-size: 0.85rem; /* Reduced font size further on small screens */
+    }
+  
+    .faq-answer {
+      font-size: 0.8rem; /* Reduced answer font size */
+    }
+    .faq-section {
+      margin: 50px 0 50px 0;
+    }
+  }
+  
